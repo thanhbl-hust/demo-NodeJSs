@@ -8,6 +8,8 @@ const getNotes = function () {
 
 const addNote = function (title, body) {
     const notes = loadNotes();
+
+    console.log('Note name: ' + title);
     // console.log(notes);
 
 
@@ -23,10 +25,10 @@ const addNote = function (title, body) {
             body: body
         })
         //console.log(notes);
+        console.log(chalk.green('Add note success!'));
         saveNotes(notes);
-        console.log(chalk.green.inverse('Add note success!'));
     } else {
-        console.log(chalk.red.inverse('Note title already exist!'));
+        console.log(chalk.red('Note title already exist!'));
     }
 }
 

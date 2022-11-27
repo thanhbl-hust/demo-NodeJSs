@@ -5,17 +5,17 @@ const addnote = require('./add_notes.js')
 
 
 const removeNotes = function (title) {
-    console.log(title);
+    console.log('You want to delete note named: ' + title);
     const notes = addnote.loadNotes();
     const notesToKeep = notes.filter(function (notes) {
         return notes.title !== title;
     })
 
     if (notes.length > notesToKeep.length) {
-        console.log(chalk.green.inverse('Delete note success!'));
+        console.log(chalk.green('Delete note success!'));
         addnote.saveNotes(notesToKeep);
     } else {
-        console.log(chalk.red.inverse('No note match your title!'));
+        console.log(chalk.red('No note match your title!'));
     }
 }
 

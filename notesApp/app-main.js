@@ -23,7 +23,13 @@ const list_notes = require('./action/list_notes.js');
 //take input from user;
 //console.log(process.argv);
 
-console.log("Notes App demo - NodeJS");
+console.log(chalk.green('Using command to edit notes'));
+console.log(chalk.white('* add --title=title --body=body //add a note'));
+console.log(chalk.white('* rm --title=title //remove a note'));
+console.log(chalk.white('* ls //list all notes'));
+console.log(chalk.white('* read --title=title //read content of a note'));
+console.log(chalk.white('-----------------------------------------------'));
+
 
 yargs.version('1.1.0'); //change version;
 //add, remove, read, list;
@@ -46,7 +52,6 @@ yargs.command({
     },
     handler: function (argv) {
         notes.addNote(argv.title, argv.body);
-        list_notes.listNode();
     }
 })
 
@@ -63,7 +68,6 @@ yargs.command({
     },
     handler: function (argv) {
         remove_notes.removeNotes(argv.title);
-        list_notes.listNode();
     }
 })
 
@@ -89,7 +93,6 @@ yargs.command({
         }
     },
     handler: function (argv) {
-        list_notes.listNode();
         readnote.read_notes(argv.title);
     }
 })
