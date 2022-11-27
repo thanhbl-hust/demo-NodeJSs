@@ -14,9 +14,9 @@ const listNode = () => {
         console.log(chalk.red('Error: No note exist!'));
     } else {
         JSform.forEach((note) => {
-            console.log("Note " + count + ':');
-            console.log(' - Name: ' + note.title);
-            console.log(' - Content: ' + note.body);
+            console.log(`Note ${count}:`);
+            console.log(`- Title: ${note.title}`);
+            console.log(`- Content: ${note.body}`);
             count += 1;
         })
     }

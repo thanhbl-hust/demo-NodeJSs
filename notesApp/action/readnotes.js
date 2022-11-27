@@ -8,8 +8,8 @@ const read_notes = function (title) {
 
     const findNote = notes.find((findNote) => findNote.title === title);
     if (findNote) {
-        console.log('Title: ' + findNote.title);
-        console.log('Content: ' + findNote.body); //note with name title exist;
+        console.log(`Title: ${findNote.title}`);
+        console.log(`Content: ${findNote.body}`); //note with name title exist;
     } else {
         console.log(chalk.red('No note match your title!'));
     }
