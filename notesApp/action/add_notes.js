@@ -1,15 +1,23 @@
 const fs = require('fs');
 const chalk = require('chalk');
 
+
+const loadNotes = function () {
+    try {
+        const dataBuffer = fs.readFileSync('./data/notes.json');
+        const dataJSON = dataBuffer.toString();
+        return JSON.parse(dataJSON);
+    } catch (e) {
+        //noFile name notes.json;
+        return [];
+    }
+}
+
+
 const addNote = function (title, body) {
-    const notes = loadNotes();
+    const notes = loadNotes(); //loadNotes;
 
     console.log(`Note name: ${title}`);
-    // console.log(notes);
-
-
-    //check title
-
     const duplicate = notes.filter(function (notes) {
         return notes.title === title;
     })
@@ -24,19 +32,6 @@ const addNote = function (title, body) {
         saveNotes(notes);
     } else {
         console.log(chalk.red('Note title already exist!'));
-    }
-}
-
-
-
-const loadNotes = function () {
-    try {
-        const dataBuffer = fs.readFileSync('./data/notes.json');
-        const dataJSON = dataBuffer.toString();
-        return JSON.parse(dataJSON);
-    } catch (e) {
-        //noFile name notes.json;
-        return [];
     }
 }
 
