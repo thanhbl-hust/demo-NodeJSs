@@ -11,7 +11,7 @@ const listNode = () => {
     var count = 1;
 
     if (JSform.length === 0) {
-        console.log(chalk.red('Error: No note exist!'));
+        console.log(chalk.red('No note exist!'));
     } else {
         JSform.forEach((note) => {
             console.log(`Note ${count}:`);
@@ -26,3 +26,4 @@ const listNode = () => {
 module.exports = {
     listNode
 }
+

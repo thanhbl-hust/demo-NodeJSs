@@ -5,7 +5,7 @@ const addnote = require('./add_notes.js')
 
 
 const removeNotes = function (title) {
-    console.log('You want to delete note named: ' + title);
+    console.log(`Notes you want to delete: "${title}"`);
     const notes = addnote.loadNotes();
     const notesToKeep = notes.filter(function (notes) {
         return notes.title !== title;

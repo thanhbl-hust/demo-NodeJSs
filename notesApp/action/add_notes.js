@@ -3,12 +3,13 @@ const chalk = require('chalk');
 
 
 const loadNotes = function () {
+    //hàm loadNotes để lấy thông tin trong db;
     try {
         const dataBuffer = fs.readFileSync('./data/notes.json');
         const dataJSON = dataBuffer.toString();
         return JSON.parse(dataJSON);
     } catch (e) {
-        //noFile name notes.json;
+        //if noFile name notes.json;
         return [];
     }
 }
@@ -38,7 +39,7 @@ const addNote = function (title, body) {
 
 const saveNotes = function (notes) {
     const dataJSON = JSON.stringify(notes);
-    fs.writeFileSync('./data/notes.json', dataJSON);
+    fs.writeFileSync('./data/notes.json', dataJSON); //ghi de
 }
 
 

@@ -1,1 +1,1 @@
-Basic Nodejs to build Notes App and Weather App.
+Basic Nodejs to build Notes App and Express Basic.
