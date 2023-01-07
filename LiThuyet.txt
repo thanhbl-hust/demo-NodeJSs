@@ -1,0 +1,64 @@
+Learned:
+  - JSON: Java Script Object Notation(là một kiểu dữ liệu mở trong JS, chủ yếu là dạng text, có thể đọc dưới dạng key - value);
+  - API: Application Programming Interface(Giao diện lập trình ứng dụng).
+  - URI, URL, URN
+
+
+Express: Learned in each videos
+----------------------------------------------------
+Video 1: Introduction and basic Express
+    - app.listen
+
+Video 2 & 3: GET and POST and Express.JS
+    - Phân biệt giữa app.GET và app.POST: để dễ hiểu, có thể hiểu phương thức GET là để lấy dữ liệu trên server, còn POST là để đẩy
+      dữ liệu lên trên server.
+    - using nodemon for faster
+    - using Thunder Client (in Visual Studio Code) to practice.
+
+Video 4: MiddleWare  
+    - Có thể hiểu là MIDDLEWARE là các hàm trung gian, sau khi đã được thiết lập, các request từ phía người dùng sẽ thực hiện lần lượt 
+      các middleware liên tiếp cho đến khi trả về response cho người dùng. Các hàm này sẽ được quyền truy cập đến các đối tượng cho 
+      Request - RES, REQ - response, hàm mw tiếp theo - next(), hay đối tượng lỗi - err() nếu cần thiết.
+
+Video 5: RouteParameters
+    - Route Paramters là những vị trí trên URL được đánh dấu bằng cách đặt tên, mục đích là để lấy ra các giá trị tương ứng. Tất cả các 
+      giá trị đối số sẽ được đặt vào đối tượng REQ trong thuộc tính params. Với tên thuộc tính trùng khớp với từ khóa được xác định trên URL.
+
+Video 6: Routers
+    - Như import ... from ... trong python hay module.export trong noteAppDemo(share các hàm).
+
+Video 7: Query Parameters
+    - Query Parameters là một chuỗi truy vấn được client gửi lên server, khi đó server sẽ nhận các thông tin này để xử lí và trả về một kết quả 
+      phù hợp với truy vấn được gửi lên (phụ thuộc hoàn toàn vào code)
+Video 8: Cookies
+    - Cookies là những tập tin một trang web gửi đến máy người dùng và được lưu lại thông qua trình duyệt khi người dùng truy cập đến trang web đó
+      . Cookies được dùng để lưu trữ với rất nhiều mục đích như lưu phiên đăng nhập, hoạt động của người dùng khi truy cập trang web. Cookies có nhiều
+      loại khác nhau và phân chia theo mục đích sử dụng.
+Video 9: Session
+    - Session là một phiên làm việc, là một khái niệm phổ biến trong lập trình web có kết nối với database. Đặc biệt các chức năng như login, logout người
+      dùng có thể sẽ khó thực hiện nếu không sử dụng session.
+----------------------------------------------------
+
+
+
+Notes App:
+- NodeJS modules
+  - Importing NodeJS core modules - link: https://nodejs.org/dist/latest-v18.x/docs/api/cluster.html(example with FileSystem modules).
+  - Importing my own file to get function i need(module.exports).
+    + Cách để export nhiều function trong NodeJS - link: https://stackoverflow.com/questions/16631064/declare-multiple-module-exports-in-node-js
+  - Importing NPM modules and test npm packpage functions (validator, chalk) - link: https://www.npmjs.com/
+  - Using nodemon for save time.
+
+- File System (FS) and command lines
+  - take input from user(using process argv)
+  - YARGS: là một module giúp bạn sử dụng console có tính tương tác cao và thân thiện với người sử dụng hơn (npm install yargs).
+    - console.log(yargs.argv)
+    - Storing Data(Notes) with JSON (using fs.writeFileSync and JSON.stringify)
+      - Function: JSON.stringify(object) <> JSON.parse(JSON form of object) and example.
+- Action:
+  - Action to notes list: add, remove, read, list notes.
+
+
+
+
+

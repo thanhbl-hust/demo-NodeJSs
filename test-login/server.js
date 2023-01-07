@@ -17,7 +17,7 @@ initializePassport(
     id => users.find(user => user.id === id)
 )
 
-const users = []
+const users = [] //
 
 app.set('view-engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
@@ -87,4 +87,4 @@ function checkNotAuthenticated(req, res, next) {
     next()
 }
 
-app.listen(3000)
+app.listen(3000);
